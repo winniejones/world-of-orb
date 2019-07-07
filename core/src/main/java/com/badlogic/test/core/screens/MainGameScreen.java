@@ -11,8 +11,8 @@ import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.math.Rectangle;
-import com.badlogic.test.core.Entity;
-import com.badlogic.test.core.MapManager;
+import com.badlogic.test.core.gameComponents.entities.Entity;
+import com.badlogic.test.core.gameComponents.maps.MapManager;
 import com.badlogic.test.core.PlayerController;
 
 public class MainGameScreen implements Screen {

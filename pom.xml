@@ -11,7 +11,7 @@
 	<properties>
 		<gwt.version>2.6.0</gwt.version>
 		<gwt.maven.version>2.6.0</gwt.maven.version>
-		<libgdx.version>1.9.8</libgdx.version>
+		<libgdx.version>1.9.9</libgdx.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -89,7 +89,7 @@
 		</repository>
 		<repository>
 			<id>gdx-releases</id>
-			<url>https://oss.sonatype.org/content/repositories/releases/</url>
+			<url>https://mvnrepository.com/artifact/com.badlogicgames.gdx/gdx</url>
 		</repository>
 	</repositories>
 
