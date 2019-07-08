@@ -2,13 +2,15 @@ package com.badlogic.test.core.coreComponents.input;
 
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.utils.Json;
+import com.badlogic.test.core.coreComponents.ComponentSubject;
 import com.badlogic.test.core.gameComponents.entities.Entity;
 import com.badlogic.test.core.coreComponents.Component;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class InputComponent implements Component, InputProcessor {
+public abstract class InputComponent extends ComponentSubject implements Component, InputProcessor {
+
     protected Entity.Direction _currentDirection = null;
     protected Entity.State _currentState = null;
     protected Json _json;
@@ -32,16 +34,17 @@ public abstract class InputComponent implements Component, InputProcessor {
         keys.put(Keys.DOWN, false);
         keys.put(Keys.QUIT, false);
         keys.put(Keys.PAUSE, false);
-    }
+    };
 
     static {
         mouseButtons.put(Mouse.SELECT, false);
         mouseButtons.put(Mouse.DOACTION, false);
-    }
+    };
 
     InputComponent(){
         _json = new Json();
     }
 
     public abstract void update(Entity entity, float delta);
+
 }

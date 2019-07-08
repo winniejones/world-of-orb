@@ -9,6 +9,7 @@ import com.badlogic.gdx.math.GridPoint2;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Json;
+import com.badlogic.test.core.coreComponents.ComponentSubject;
 import com.badlogic.test.core.gameComponents.entities.Entity;
 import com.badlogic.test.core.gameComponents.maps.MapManager;
 import com.badlogic.test.core.Utility;
@@ -16,13 +17,13 @@ import com.badlogic.test.core.coreComponents.Component;
 
 import java.util.Hashtable;
 
-public abstract class GraphicsComponent implements Component {
+public abstract class GraphicsComponent extends ComponentSubject implements Component {
     protected TextureRegion _currentFrame = null;
     protected float _frameTime = 0f;
     protected Entity.State _currentState;
     protected Entity.Direction _currentDirection;
     protected Json _json;
-    protected Vector2 _currentPosition;
+    public Vector2 _currentPosition;
     protected Hashtable<Entity.AnimationType, Animation<TextureRegion>> _animations;
     protected ShapeRenderer _shapeRenderer;
 
@@ -34,6 +35,7 @@ public abstract class GraphicsComponent implements Component {
         _animations = new Hashtable<>();
         _shapeRenderer = new ShapeRenderer();
     }
+
     public abstract void update(Entity entity, MapManager mapManager, Batch batch, float delta);
 
     protected void updateAnimations(float delta){

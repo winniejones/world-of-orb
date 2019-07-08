@@ -12,16 +12,20 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Json;
 import com.badlogic.test.core.Utility;
+import com.badlogic.test.core.audio.AudioManager;
+import com.badlogic.test.core.audio.AudioObserver;
+import com.badlogic.test.core.audio.AudioSubject;
 import com.badlogic.test.core.gameComponents.entities.Entity;
 import com.badlogic.test.core.sfx.ParticleEffectFactory;
 
 import java.util.Hashtable;
 
-public abstract class Map {
+public abstract class Map implements AudioSubject {
     private static final String TAG = Map.class.getSimpleName();
+
     public final static float UNIT_SCALE  = 1/16f;
 
-    // private Array<AudioObserver> _observers;
+    private Array<AudioObserver> _observers;
 
     //Map layers
     protected final static String COLLISION_LAYER = "MAP_COLLISION_LAYER";
@@ -76,7 +80,7 @@ public abstract class Map {
     Map( MapFactory.MapType mapType, String fullMapPath){
         _json = new Json();
         _mapEntities = new Array<Entity>(10);
-        //_observers = new Array<AudioObserver>();
+        _observers = new Array<AudioObserver>();
         _mapQuestEntities = new Array<Entity>();
         _mapParticleEffects = new Array<ParticleEffect>();
         _currentMapType = mapType;
@@ -160,7 +164,7 @@ public abstract class Map {
         _specialNPCStartPositions = getSpecialNPCStartPositions();
 
         //Observers
-        // this.addObserver(AudioManager.getInstance());
+        this.addObserver(AudioManager.getInstance());
     }
 
     public MapLayer getLightMapDawnLayer(){
@@ -413,6 +417,28 @@ public abstract class Map {
         setClosestStartPosition(_convertedUnits);
     }
 
-    //abstract public void unloadMusic();
-    //abstract public void loadMusic();
+    abstract public void unloadMusic();
+    abstract public void loadMusic();
+
+    @Override
+    public void addObserver(AudioObserver audioObserver) {
+        _observers.add(audioObserver);
+    }
+
+    @Override
+    public void removeObserver(AudioObserver audioObserver) {
+        _observers.removeValue(audioObserver, true);
+    }
+
+    @Override
+    public void removeAllObservers() {
+        _observers.removeAll(_observers, true);
+    }
+
+    @Override
+    public void notify(AudioObserver.AudioCommand command, AudioObserver.AudioTypeEvent event) {
+        for(AudioObserver observer: _observers){
+            observer.onNotify(command, event);
+        }
+    }
 }
