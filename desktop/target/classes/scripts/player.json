@@ -2,51 +2,6 @@
 	"entityID": "PLAYER",
 	"state": "IDLE",
 	"direction": "DOWN",
-	"conversationConfigPath": "",
-	"questConfigPath": "",
-	"currentQuestID": "",
-	"itemTypeID": "NONE",
-	"inventory": [
-		{
-			"value": "ARMOR04"
-		},
-		{
-			"value": "BOOTS03"
-		},
-		{
-			"value": "HELMET05"
-		},
-		{
-			"value": "POTIONS01"
-		},
-		{
-			"value": "POTIONS01"
-		},
-		{
-			"value": "POTIONS01"
-		},
-		{
-			"value": "POTIONS01"
-		},
-		{
-			"value": "SCROLL01"
-		},
-		{
-			"value": "SCROLL01"
-		},
-		{
-			"value": "SCROLL01"
-		},
-		{
-			"value": "SHIELD02"
-		},
-		{
-			"value": "WANDS02"
-		},
-		{
-			"value": "WEAPON01"
-		}
-	],
 	"animationConfig": [
 		{
 			"frameDuration": 0.25,
@@ -75,7 +30,7 @@
 			]
 		},
 		{
-			"frameDuration": 0.25,
+			"frameDuration": 0.15,
 			"animationType": "WALK_DOWN",
 			"texturePaths": [
 				"sprites/characters/Warrior.png"
@@ -101,7 +56,7 @@
 			]
 		},
 		{
-			"frameDuration": 0.25,
+			"frameDuration": 0.15,
 			"animationType": "WALK_LEFT",
 			"texturePaths": [
 				"sprites/characters/Warrior.png"
@@ -127,7 +82,7 @@
 			]
 		},
 		{
-			"frameDuration": 0.25,
+			"frameDuration": 0.15,
 			"animationType": "WALK_RIGHT",
 			"texturePaths": [
 				"sprites/characters/Warrior.png"
@@ -153,7 +108,7 @@
 			]
 		},
 		{
-			"frameDuration": 0.25,
+			"frameDuration": 0.15,
 			"animationType": "WALK_UP",
 			"texturePaths": [
 				"sprites/characters/Warrior.png"

@@ -44,7 +44,6 @@ public class WorldOfOrbGame extends Game {
 			default:
 				return _mainMenuScreen;
 		}
-
 	}
 
 	@Override

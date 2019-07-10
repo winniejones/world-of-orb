@@ -2,6 +2,14 @@ package com.badlogic.test.core.gameComponents.maps;
 
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.utils.Json;
+import com.badlogic.test.core.audio.AudioObserver;
+import com.badlogic.test.core.coreComponents.Component;
+import com.badlogic.test.core.coreComponents.physics.PlayerPhysicsComponent;
+import com.badlogic.test.core.gameComponents.entities.Entity;
+import com.badlogic.test.core.gameComponents.entities.EntityConfig;
+import com.badlogic.test.core.gameComponents.entities.EntityFactory;
+import com.badlogic.test.core.profile.ProfileManager;
 import com.badlogic.test.core.sfx.ParticleEffectFactory;
 
 public class TopWorldMap extends Map{
@@ -20,14 +28,14 @@ public class TopWorldMap extends Map{
         }
     }
 
-//    @Override
-//    public void unloadMusic() {
-//        notify(AudioObserver.AudioCommand.MUSIC_STOP, AudioObserver.AudioTypeEvent.MUSIC_TOPWORLD);
-//    }
-//
-//    @Override
-//    public void loadMusic() {
-//        notify(AudioObserver.AudioCommand.MUSIC_LOAD, AudioObserver.AudioTypeEvent.MUSIC_TOPWORLD);
-//        notify(AudioObserver.AudioCommand.MUSIC_PLAY_LOOP, AudioObserver.AudioTypeEvent.MUSIC_TOPWORLD);
-//    }
+    @Override
+    public void unloadMusic() {
+        notify(AudioObserver.AudioCommand.MUSIC_STOP, AudioObserver.AudioTypeEvent.MUSIC_TOPWORLD);
+    }
+
+    @Override
+    public void loadMusic() {
+        notify(AudioObserver.AudioCommand.MUSIC_LOAD, AudioObserver.AudioTypeEvent.MUSIC_TOPWORLD);
+        notify(AudioObserver.AudioCommand.MUSIC_PLAY_LOOP, AudioObserver.AudioTypeEvent.MUSIC_TOPWORLD);
+    }
 }

@@ -9,7 +9,6 @@ import com.badlogic.test.core.WorldOfOrbGame;
 public class WorldOfOrbDesktop {
 	public static void main (String[] args) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		System.out.println("Bajs");
 		config.title = "World Of Orb";
 		config.useGL30 = false;
 		config.width = 1600;
