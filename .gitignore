@@ -125,7 +125,13 @@ Thumbs.db
 /ios-moe/xcode/native/
 
 ### Maven template
+.classpath
+.project
+.settings/
 target/
+/target/**
+*/target/**
+
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
