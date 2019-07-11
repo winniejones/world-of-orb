@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="75" height="75" tilewidth="16" tileheight="16" nextobjectid="449">
- <tileset firstgid="1" name="Wall" tilewidth="16" tileheight="16" tilecount="1020" columns="20">
+<!DOCTYPE map SYSTEM "http://mapeditor.org/dtd/1.0/map.dtd">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="75" height="75" tilewidth="16" tileheight="16" nextobjectid="449">
+ <tileset firstgid="1" name="Wall" tilewidth="16" tileheight="16">
   <image source="../sprites/objects/Wall.png" width="320" height="816"/>
  </tileset>
- <tileset firstgid="1021" name="Floor" tilewidth="16" tileheight="16" tilecount="819" columns="21">
+ <tileset firstgid="1021" name="Floor" tilewidth="16" tileheight="16">
   <image source="../sprites/objects/Floor.png" width="336" height="624"/>
  </tileset>
- <tileset firstgid="1840" name="Tree0" tilewidth="16" tileheight="16" tilecount="264" columns="8">
+ <tileset firstgid="1840" name="Tree0" tilewidth="16" tileheight="16">
   <image source="../sprites/objects/Tree0.png" trans="ffffff" width="128" height="528"/>
  </tileset>
- <tileset firstgid="2104" name="Hill0" tilewidth="16" tileheight="16" tilecount="288" columns="16">
+ <tileset firstgid="2104" name="Hill0" tilewidth="16" tileheight="16">
   <image source="../sprites/objects/Hill0.png" trans="ffffff" width="256" height="288"/>
  </tileset>
- <tileset firstgid="2392" name="Pit0" tilewidth="16" tileheight="16" tilecount="256" columns="8">
+ <tileset firstgid="2392" name="Pit0" tilewidth="16" tileheight="16">
   <image source="../sprites/objects/Pit0.png" width="128" height="512"/>
  </tileset>
- <tileset firstgid="2648" name="Door0" tilewidth="16" tileheight="16" tilecount="40" columns="8">
+ <tileset firstgid="2648" name="Door0" tilewidth="16" tileheight="16">
   <image source="../sprites/objects/Door0.png" width="128" height="80"/>
  </tileset>
- <tileset firstgid="2688" name="Decor0" tilewidth="16" tileheight="16" tilecount="176" columns="8">
+ <tileset firstgid="2688" name="Decor0" tilewidth="16" tileheight="16">
   <image source="../sprites/objects/Decor0.png" width="128" height="352"/>
  </tileset>
- <tileset firstgid="2864" name="Ground0" tilewidth="16" tileheight="16" tilecount="56" columns="8">
+ <tileset firstgid="2864" name="Ground0" tilewidth="16" tileheight="16">
   <image source="../sprites/objects/Ground0.png" width="128" height="112"/>
  </tileset>
- <tileset firstgid="2920" name="Map0" tilewidth="16" tileheight="16" tilecount="180" columns="12">
+ <tileset firstgid="2920" name="Map0" tilewidth="16" tileheight="16">
   <image source="../sprites/objects/Map0.png" trans="ffffff" width="192" height="240"/>
  </tileset>
- <tileset firstgid="3100" name="Light" tilewidth="16" tileheight="16" tilecount="8" columns="8">
+ <tileset firstgid="3100" name="Light" tilewidth="16" tileheight="16">
   <image source="../sprites/items/Light.png" trans="ffffff" width="128" height="16"/>
  </tileset>
  <layer name="Background_Layer" width="75" height="75">
@@ -459,18 +460,18 @@
   <object id="419" name="6" x="204" y="40" width="800" height="128"/>
  </objectgroup>
  <imagelayer name="MAP_LIGHTMAP_LAYER_DAWN" visible="0">
-  <image source="topworld_lightmap_dawn.png" width="1200" height="1200"/>
+  <image source="topworld_lightmap_dawn.png"/>
  </imagelayer>
  <imagelayer name="MAP_LIGHTMAP_LAYER_DUSK" visible="0" opacity="0.9">
-  <image source="topworld_lightmap_dusk.png" width="1200" height="1200"/>
+  <image source="topworld_lightmap_dusk.png"/>
  </imagelayer>
  <imagelayer name="MAP_LIGHTMAP_LAYER_NIGHT" visible="0">
-  <image source="topworld_lightmap_night.png" width="1200" height="1200"/>
+  <image source="topworld_lightmap_night.png"/>
  </imagelayer>
  <imagelayer name="MAP_LIGHTMAP_LAYER_AFTERNOON" visible="0">
-  <image source="topworld_lightmap_afternoon.png" width="1200" height="1200"/>
+  <image source="topworld_lightmap_afternoon.png"/>
  </imagelayer>
- <objectgroup name="PARTICLE_EFFECT_SPAWN_LAYER" visible="0">
+ <objectgroup name="PARTICLE_EFFECT_SPAWN_LAYER">
   <object id="428" name="LANTERN_FIRE" x="246" y="839" width="4" height="4"/>
   <object id="431" name="LANTERN_FIRE" x="246" y="839" width="4" height="4"/>
   <object id="432" name="LANTERN_FIRE" x="598" y="871" width="4" height="4"/>
