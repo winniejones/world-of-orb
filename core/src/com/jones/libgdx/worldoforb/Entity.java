@@ -50,6 +50,7 @@ public class Entity {
 	public static enum State {
 		IDLE,
 		WALKING,
+		SHOOTING,
 
 		IMMOBILE;//This should always be last
 

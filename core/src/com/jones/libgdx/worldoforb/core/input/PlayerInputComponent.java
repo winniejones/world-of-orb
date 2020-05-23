@@ -55,6 +55,9 @@ public class PlayerInputComponent extends InputComponent {
 		}else if(keys.get(Keys.QUIT)) {
 			quitReleased();
 			Gdx.app.exit();
+		}else if(keys.get(Keys.ACTION)) {
+			//SHOOT
+			entity.sendMessage(MESSAGE.CURRENT_STATE, _json.toJson(Entity.State.SHOOTING));
 		}else{
 			entity.sendMessage(MESSAGE.CURRENT_STATE, _json.toJson(Entity.State.IDLE));
 			if( _currentDirection == null ){
@@ -90,6 +93,9 @@ public class PlayerInputComponent extends InputComponent {
 		if( keycode == Input.Keys.P ){
 			this.pausePressed();
 		}
+		if( keycode == Input.Keys.SPACE ){
+			this.actionPressed();
+		}
 
 		return true;
 	}
@@ -113,6 +119,9 @@ public class PlayerInputComponent extends InputComponent {
 		}
 		if( keycode == Input.Keys.P ){
 			this.pauseReleased();
+		}
+		if( keycode == Input.Keys.SPACE ){
+			this.actionReleased();
 		}
 		return true;
 	}
@@ -190,6 +199,10 @@ public class PlayerInputComponent extends InputComponent {
 	public void pausePressed() {
 		keys.put(Keys.PAUSE, true);
 	}
+
+	public void actionPressed() {
+		keys.put(Keys.ACTION, true);
+	}
 	
 	public void setClickedMouseCoordinates(int x,int y){
 		_lastMouseCoordinates.set(x, y, 0);
@@ -226,6 +239,8 @@ public class PlayerInputComponent extends InputComponent {
 	}
 
 	public void pauseReleased() { keys.put(Keys.PAUSE, false);}
+
+	public void actionReleased() { keys.put(Keys.ACTION, false);}
 	
 	public void selectMouseButtonReleased(int x, int y){
 		mouseButtons.put(Mouse.SELECT, false);
