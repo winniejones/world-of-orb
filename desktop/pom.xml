@@ -17,11 +17,11 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
+		<!--dependency>
 			<groupId>com.badlogic.test</groupId>
 			<artifactId>test-core</artifactId>
 			<version>${project.version}</version>
-		</dependency>
+		</dependency-->
 
 		<dependency>
 			<groupId>com.badlogicgames.gdx</groupId>

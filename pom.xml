@@ -9,9 +9,10 @@
 	<name>World of orb</name>
 
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<gwt.version>2.6.0</gwt.version>
 		<gwt.maven.version>2.6.0</gwt.maven.version>
-		<libgdx.version>1.9.8</libgdx.version>
+		<libgdx.version>1.9.10</libgdx.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -82,7 +83,7 @@
 	</dependencyManagement>
 
 
-	<repositories>
+	<!--repositories>
 		<repository>
 			<id>gdx-nightlies</id>
 			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
@@ -91,7 +92,7 @@
 			<id>gdx-releases</id>
 			<url>https://oss.sonatype.org/content/repositories/releases/</url>
 		</repository>
-	</repositories>
+	</repositories-->
 
 	<build>
 		<plugins>

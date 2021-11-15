@@ -5,7 +5,7 @@ import com.badlogic.gdx.utils.Array;
 import com.jones.libgdx.worldoforb.audio.AudioObserver;
 import com.jones.libgdx.worldoforb.sfx.ParticleEffectFactory;
 
-public class TopWorldMap extends Map{
+public class TopWorldMap extends Map {
     private static String _mapPath = "maps/topworld.tmx";
 
     TopWorldMap(){

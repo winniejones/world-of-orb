@@ -63,7 +63,7 @@ public class WorldOfOrb extends Game {
 		_gameOverScreen = new GameOverScreen(this);
 		_cutSceneScreen = new CutSceneScreen(this);
 		_creditScreen = new CreditScreen(this);
-		setScreen(_mainMenuScreen);
+		//setScreen(_mainMenuScreen);
 	}
 
 	@Override

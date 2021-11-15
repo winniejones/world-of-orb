@@ -8,8 +8,8 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.jones.libgdx.worldoforb.WorldOfOrb;
 import com.jones.libgdx.worldoforb.Utility;
+import com.jones.libgdx.worldoforb.WorldOfOrb;
 import com.jones.libgdx.worldoforb.audio.AudioObserver;
 
 public class MainMenuScreen extends GameScreen {
@@ -44,31 +44,32 @@ public class MainMenuScreen extends GameScreen {
 		_stage.addActor(table);
 
 		//Listeners
-		newGameButton.addListener(new ClickListener() {
-									  @Override
-									  public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-										  return true;
-									  }
+		newGameButton.addListener(
+			new ClickListener() {
+				@Override
+				public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
+				  return true;
+				}
 
-									  @Override
-									  public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
-										  _game.setScreen(_game.getScreenType(WorldOfOrb.ScreenType.NewGame));
-									  }
-								  }
+				@Override
+				public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
+				  _game.setScreen(_game.getScreenType(WorldOfOrb.ScreenType.NewGame));
+				}
+			}
 		);
 
-		loadGameButton.addListener(new ClickListener() {
+		loadGameButton.addListener(
+			new ClickListener() {
+				@Override
+				public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
+				   return true;
+				}
 
-									   @Override
-									   public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-										   return true;
-									   }
-
-									   @Override
-									   public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
-										   _game.setScreen(_game.getScreenType(WorldOfOrb.ScreenType.LoadGame));
-									   }
-								   }
+				@Override
+				public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
+				   _game.setScreen(_game.getScreenType(WorldOfOrb.ScreenType.LoadGame));
+				}
+			}
 		);
 
 		exitButton.addListener(new ClickListener() {

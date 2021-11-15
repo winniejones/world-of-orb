@@ -40,6 +40,7 @@ public class MainGameScreen extends GameScreen {
 		PAUSED,
 		GAME_OVER
 	}
+
 	private static GameState _gameState;
 
 	protected OrthogonalTiledMapRenderer _mapRenderer = null;
@@ -68,7 +69,7 @@ public class MainGameScreen extends GameScreen {
 		_camera = new OrthographicCamera();
 		_camera.setToOrtho(false, VIEWPORT.viewportWidth, VIEWPORT.viewportHeight);
 
-		_player = EntityFactory.getInstance().getEntity(EntityFactory.EntityType.PLAYER);
+		_player = EntityFactory. getInstance().getEntity(EntityFactory.EntityType.PLAYER);
 		_mapMgr.setPlayer(_player);
 		_mapMgr.setCamera(_camera);
 
